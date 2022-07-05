@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button'
 
 import './App.css'
 
-export default function NewApp() {
+export function FreePBX() {
   const eventHandler = React.useMemo(() => new EventEmitter(), [])
   const [currentCallState, setCurrentCallState] = React.useState(null)
   const [currentConnectionState, setCurrentConnectionState] =
@@ -78,7 +78,7 @@ export default function NewApp() {
         <WebRTCClient
           // enableVideo={true}
           enableSound={true}
-          webSocketPort={'8089'} //default port for websocket is 8089 on sip server
+          webSocketPort={'8088'} //default port for websocket is 8089 on sip server
           autoRegister={true}
           sipDomain={process.env.REACT_APP_SIP_DOMAIN} // Sip Domain
           sipServer={process.env.REACT_APP_SIP_SERVER} // Optional: Sip Server Adress, if not set domain is used instead

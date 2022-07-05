@@ -6015,6 +6015,19 @@ invert-kv@^2.0.0:
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-2.0.0.tgz#7393f5afa59ec9ff5f67a27620d11c226e3eec02"
   integrity sha512-wPVv/y/QQ/Uiirj/vh3oP+1Ww+AWehmi1g5fFWGPF6IpCBCDVrhgHRMvrLfdYcwDh3QJbGXDW4JAuzxElLSqKA==
 
+iotcomms-react-webrtc@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/iotcomms-react-webrtc/-/iotcomms-react-webrtc-1.0.10.tgz#5802a73f14787af740ffb6612e53c10640e210ed"
+  integrity sha512-qIH6w7UIa9kwZv0BAokkeM/HpyRu1z1GzO8tBqvkR/A4LPbeiA9goJM6kdzeym4468/N0hNXDY7W+vJvo09yxg==
+  dependencies:
+    debug "^4.1.1"
+    detect-browser "^4.5.1"
+    prop-types "^15.7.2"
+    react-bootstrap "^1.0.0-beta.9"
+    react-scripts "^3.0.1"
+    sip.js "^0.14.4"
+    webrtc-adapter "^7.2.4"
+
 ip-regex@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/ip-regex/-/ip-regex-2.1.0.tgz#fa78bf5d2e6913c911ce9f819ee5146bb6d844e9"
@@ -12169,7 +12182,7 @@ terser-webpack-plugin@1.4.1:
     find-cache-dir "^2.1.0"
     is-wsl "^1.1.0"
     schema-utils "^1.0.0"
-    serialize-javascript "^2.1.1"
+    serialize-javascript "^1.7.0"
     source-map "^0.6.1"
     terser "^4.1.2"
     webpack-sources "^1.4.0"
@@ -12184,7 +12197,7 @@ terser-webpack-plugin@2.2.1:
     find-cache-dir "^3.0.0"
     jest-worker "^24.9.0"
     schema-utils "^2.5.0"
-    serialize-javascript "^2.1.1"
+    serialize-javascript "^2.1.0"
     source-map "^0.6.1"
     terser "^4.3.9"
     webpack-sources "^1.4.3"
