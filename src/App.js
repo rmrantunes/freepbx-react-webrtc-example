@@ -80,10 +80,10 @@ export default function NewApp() {
           enableSound={true}
           webSocketPort={'8089'} //default port for websocket is 8089 on sip server
           autoRegister={true}
-          sipDomain={'sip.domain.de'} // Sip Domain
-          sipServer={'123.123.2.12'} // Optional: Sip Server Adress, if not set domain is used instead
-          sipUser={'1234'} // Username of caller
-          sipPassword={'SIP_CALLER_PASS'} // Password of caller
+          sipDomain={process.env.REACT_APP_SIP_DOMAIN} // Sip Domain
+          sipServer={process.env.REACT_APP_SIP_SERVER} // Optional: Sip Server Adress, if not set domain is used instead
+          sipUser={process.env.REACT_APP_SIP_USER} // Username of caller
+          sipPassword={process.env.REACT_APP_SIP_PASSWORD} // Password of caller
           destination={'1234@destination.url'} // Destination, user@destination.domain
           metaData={{}} // Metadata
           alertVideoUrl={'alertUrl'}
