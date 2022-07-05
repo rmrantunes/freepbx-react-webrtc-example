@@ -1,14 +1,14 @@
 import React from 'react'
 
 import './App.css'
-// import { FreePBX } from './FreePBX'
-import { Iotcomms } from './Iotcomms'
+import { FreePBX } from './FreePBX'
+// import { Iotcomms } from './Iotcomms'
 
 export default function NewApp() {
   return (
     <div className="App">
-      <Iotcomms />
-      {/* <FreePBX /> */}
+      {/* <Iotcomms /> */}
+      <FreePBX />
     </div>
   )
 }

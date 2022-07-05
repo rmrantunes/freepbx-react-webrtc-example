@@ -44,7 +44,7 @@ export function Iotcomms() {
   }, [eventHandler])
 
   return (
-    <body>
+    <div>
       <video
         width="25%"
         height="25%"
@@ -91,8 +91,8 @@ export function Iotcomms() {
         eventHandlerEmit={eventHandlerEmit}
         updateCallState={updateCallState}
         updateConnectionState={updateConnectionState}
-        traceSip={true}
+        traceSip={false}
       />
-    </body>
+    </div>
   )
 }
