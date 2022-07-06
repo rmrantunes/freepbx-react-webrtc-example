@@ -78,7 +78,7 @@ export function FreePBX() {
         <WebRTCClient
           // enableVideo={true}
           enableSound={true}
-          webSocketPort={'8088'} //default port for websocket is 8089 on sip server
+          webSocketPort={process.env.REACT_APP_SIP_WS_PORT} //default port for websocket is 8089 on sip server
           autoRegister={true}
           sipDomain={process.env.REACT_APP_SIP_DOMAIN} // Sip Domain
           sipServer={process.env.REACT_APP_SIP_SERVER} // Optional: Sip Server Adress, if not set domain is used instead
@@ -90,7 +90,7 @@ export function FreePBX() {
           // ringbackVideoUrl={'ringbackUrl'}
           // localVideoTagId={'localVideo'} // ID of video tag for own video
           // remoteVideoTagId={'remoteVideo'} // ID of video tag for incoming remote video
-          skipStunServer={true} // True if Server is only reachable in local network and is not public
+          skipStunServer={false} // True if Server is only reachable in local network and is not public
           eventHandler={eventHandler}
           eventHandlerEmit={eventHandlerEmit}
           updateCallState={updateCallState}
