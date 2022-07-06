@@ -95,7 +95,7 @@ export function FreePBX() {
           sipServer={process.env.REACT_APP_SIP_SERVER} // Optional: Sip Server Adress, if not set domain is used instead
           sipUser={process.env.REACT_APP_SIP_USER} // Username of caller
           sipPassword={process.env.REACT_APP_SIP_PASSWORD} // Password of caller
-          destination={callTo || `2002:${process.env.REACT_APP_SIP_DOMAIN}`} // Destination, user@destination.domain
+          destination={callTo} // Destination, user@destination.domain
           metaData={{}} // Metadata
           // alertVideoUrl={'alertUrl'}
           // ringbackVideoUrl={'ringbackUrl'}
