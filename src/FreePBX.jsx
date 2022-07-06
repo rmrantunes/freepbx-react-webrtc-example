@@ -22,6 +22,7 @@ export function FreePBX() {
   const updateConnectionState = (connectionState) => {
     setCurrentConnectionState(connectionState)
   }
+  const [callTo, setCallTo] = React.useState('')
 
   React.useEffect(() => {
     // Connected and Idle
@@ -43,11 +44,15 @@ export function FreePBX() {
     eventHandler.on('InCall', function () {
       // Do something...
     })
+
+    eventHandler.on('error', function (...args) {
+      console.log('error', ...args)
+      // Do something...
+    })
   }, [eventHandler])
 
   return (
     <div className="App">
-      <header></header>
       <div>
         <video
           width="25%"
@@ -64,6 +69,12 @@ export function FreePBX() {
           autoPlay
           playsInline
         ></video>
+
+        <input
+          type="text"
+          onChange={(event) => setCallTo(event.target.value)}
+          value={callTo}
+        />
 
         <Button onClick={() => this.eventHandlerEmit('answerCall')}>
           Accept Incoming Call
@@ -84,7 +95,7 @@ export function FreePBX() {
           sipServer={process.env.REACT_APP_SIP_SERVER} // Optional: Sip Server Adress, if not set domain is used instead
           sipUser={process.env.REACT_APP_SIP_USER} // Username of caller
           sipPassword={process.env.REACT_APP_SIP_PASSWORD} // Password of caller
-          destination={'1234@destination.url'} // Destination, user@destination.domain
+          destination={callTo || `2002:${process.env.REACT_APP_SIP_DOMAIN}`} // Destination, user@destination.domain
           metaData={{}} // Metadata
           // alertVideoUrl={'alertUrl'}
           // ringbackVideoUrl={'ringbackUrl'}
