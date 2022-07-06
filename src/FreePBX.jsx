@@ -87,7 +87,7 @@ export function FreePBX() {
         </Button>
 
         <WebRTCClient
-          // enableVideo={true}
+          enableVideo={false}
           enableSound={true}
           webSocketPort={process.env.REACT_APP_SIP_WS_PORT} //default port for websocket is 8089 on sip server
           autoRegister={true}
